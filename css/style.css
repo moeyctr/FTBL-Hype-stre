@@ -1,140 +1,169 @@
-/* Reset & base */
+/* Reset */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background: #fff;
   color: #222;
   line-height: 1.6;
-  min-height: 100vh;
 }
 
-/* Navbar */
-.navbar {
-  background: #111;
-  color: white;
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.header {
+  background: #004aad;
+  color: #fff;
+  padding: 1rem 0;
+  position: relative;
+  z-index: 1000;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+.header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  font-weight: bold;
-  font-size: 1.5rem;
-  cursor: pointer;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1.4rem;
 }
 
 .logo img {
   height: 40px;
-  margin-right: 10px;
+}
+
+.nav {
+  position: relative;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   gap: 1.5rem;
+  align-items: center;
 }
 
 .nav-links li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: 600;
-  position: relative;
-  padding: 0.25rem 0;
-  transition: color 0.3s;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-  color: #e63946;
+  color: #f1c40f;
 }
 
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
+.cart-link {
+  position: relative;
 }
 
-/* Cart count badge */
 .cart-count {
-  background: #e63946;
-  color: white;
-  font-size: 0.75rem;
-  padding: 0 7px;
+  background: #f1c40f;
+  color: #004aad;
+  font-weight: 700;
+  font-size: 0.8rem;
   border-radius: 50%;
-  margin-left: 5px;
-  vertical-align: top;
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 5rem 1rem;
-}
-
-.hero h1 {
-  font-size: 4rem;
-  margin-bottom: 3rem;
-  font-weight: 900;
-  letter-spacing: 0.1rem;
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: -8px;
+  right: -15px;
   user-select: none;
 }
 
-/* Boot Gallery */
-.boot-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(120px,1fr));
-  gap: 1.5rem;
-  justify-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.boot-gallery img {
-  width: 100%;
-  max-width: 140px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+/* Mobile nav toggle */
+.nav-toggle {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 2rem;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  display: none;
 }
 
-.boot-gallery img:hover {
-  transform: scale(1.1);
+/* Search */
+.search-container {
+  margin: 1rem 0 2rem;
+  text-align: center;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #111;
-    flex-direction: column;
-    width: 200px;
-    padding: 1rem 0;
-    display: none;
-  }
-
-  .nav-links.nav-links-visible {
-    display: flex;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
+#search-input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem 1rem;
+  font-size: 1.1rem;
+  border: 2px solid #004aad;
+  border-radius: 25px;
+  transition: border-color 0.3s ease;
 }
+
+#search-input:focus {
+  outline: none;
+  border-color: #f1c40f;
+}
+
+/* Products grid */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 2rem;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  background: #fafafa;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.product:hover {
+  box-shadow: 0 5px 20px rgb(241 196 15 / 0.6);
+  transform: translateY(-5px);
+}
+
+.product img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  height: 180px;
+  object-fit: contain;
+}
+
+.product h3 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #004aad;
+}
+
+.product p {
+  font-weight: 700;
+  color: #f1c40f;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.btn-add {
+ 
