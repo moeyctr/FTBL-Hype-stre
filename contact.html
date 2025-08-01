@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact - FTBL Hype</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="FTBL Hype Logo" />
+      <span>FTBL Hype</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="boots.html">Boots</a></li>
+      <li><a href="kits.html">Kits</a></li>
+      <li><a href="balls.html">Balls</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li>
+        <a href="cart.html" class="cart-link">
+          Cart <span id="cart-count" class="cart-count">0</span>
+        </a>
+      </li>
+    </ul>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+  </nav>
+
+  <main class="contact-page">
+    <h1>Contact Us</h1>
+    <form action="mailto:your-email@example.com" method="post" enctype="text/plain" class="contact-form">
+      <label for="name">Name:</label>
+      <input id="name" name="name" type="text" required />
+
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-links-visible');
+    });
+
+    // Update cart count on contact page
+    document.addEventListener('DOMContentLoaded', () => {
+      const cart = JSON.parse(localStorage.getItem('ftblHypeCart')) || [];
+      const count = cart.reduce((sum, item) => sum + item.quantity, 0);
+      const countEl = document.getElementById('cart-count');
+      if (countEl) countEl.textContent = count;
+    });
+  </script>
+</body>
+</html>
