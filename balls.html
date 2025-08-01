@@ -1,72 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Balls - FTBL Hype</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/cart.js"></script>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="assets/logo.png" alt="FTBL Hype Logo" />
-      <span>FTBL Hype</span>
+  <header class="header sticky">
+    <div class="container header-container">
+      <a href="index.html" class="logo">
+        <img src="assets/logo.png" alt="FTBL Hype Logo" />
+        <span>FTBL Hype</span>
+      </a>
+      <nav class="nav" aria-label="Primary Navigation">
+        <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="boots.html">Boots</a></li>
+          <li><a href="kits.html">Kits</a></li>
+          <li><a href="balls.html" class="active">Balls</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="cart.html" class="cart-link" aria-label="View Cart">Cart <span id="cart-count" class="cart-count" aria-live="polite">0</span></a></li>
+        </ul>
+      </nav>
     </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="boots.html">Boots</a></li>
-      <li><a href="kits.html">Kits</a></li>
-      <li><a href="balls.html" class="active">Balls</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li>
-        <a href="cart.html" class="cart-link">
-          Cart <span id="cart-count" class="cart-count">0</span>
-        </a>
-      </li>
-    </ul>
-    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
-  </nav>
+  </header>
 
-  <main>
+  <main class="container">
     <h1>Soccer Balls</h1>
-    <div class="products">
-      <div class="product" data-id="ball1" data-name="Premier League Flight Ball" data-price="180" data-image="https://cdn.ultrafootball.com/premier-league-flight-ball.jpg">
-        <img src="https://cdn.ultrafootball.com/premier-league-flight-ball.jpg" alt="Premier League Flight Ball" loading="lazy" />
+    <div class="search-container">
+      <input type="search" id="search-input" placeholder="Search balls..." aria-label="Search balls" />
+    </div>
+
+    <section id="products" class="products">
+
+      <div class="product" data-id="ball1" data-name="Premier League Flight Ball" data-price="180" data-image="https://cdn.ultrafootball.com/products/premier-league-flight-ball-fz3033-711.jpg">
+        <img src="https://cdn.ultrafootball.com/products/premier-league-flight-ball-fz3033-711.jpg" alt="Premier League Flight Ball" loading="lazy" />
         <h3>Premier League Flight Ball</h3>
         <p>$180</p>
-        <button onclick="addToCart('ball1')">Add to Cart</button>
+        <button class="btn-add" aria-label="Add Premier League Flight Ball to cart">Add to Cart</button>
       </div>
 
-      <div class="product" data-id="ball2" data-name="Context 25 Pro Ball" data-price="120" data-image="https://cdn.ultrafootball.com/context-25-pro-ball.jpg">
-        <img src="https://cdn.ultrafootball.com/context-25-pro-ball.jpg" alt="Context 25 Pro Ball" loading="lazy" />
+      <div class="product" data-id="ball2" data-name="Context 25 Pro Ball" data-price="140" data-image="https://cdn.ultrafootball.com/products/context-25-pro-ball-jh1273.jpg">
+        <img src="https://cdn.ultrafootball.com/products/context-25-pro-ball-jh1273.jpg" alt="Context 25 Pro Ball" loading="lazy" />
         <h3>Context 25 Pro Ball</h3>
-        <p>$120</p>
-        <button onclick="addToCart('ball2')">Add to Cart</button>
+        <p>$140</p>
+        <button class="btn-add" aria-label="Add Context 25 Pro Ball to cart">Add to Cart</button>
       </div>
 
-      <div class="product" data-id="ball3" data-name="UWCL Pro 24-25 Group Stage Ball" data-price="160" data-image="https://cdn.ultrafootball.com/uwcl-pro-ball.jpg">
-        <img src="https://cdn.ultrafootball.com/uwcl-pro-ball.jpg" alt="UWCL Pro 24-25 Group Stage Ball" loading="lazy" />
+      <div class="product" data-id="ball3" data-name="UWCL Pro 24-25 Group Stage Ball" data-price="160" data-image="https://cdn.ultrafootball.com/products/uwcl-pro-24-25-group-stage-ball-is7437.jpg">
+        <img src="https://cdn.ultrafootball.com/products/uwcl-pro-24-25-group-stage-ball-is7437.jpg" alt="UWCL Pro 24-25 Group Stage Ball" loading="lazy" />
         <h3>UWCL Pro 24-25 Group Stage Ball</h3>
         <p>$160</p>
-        <button onclick="addToCart('ball3')">Add to Cart</button>
+        <button class="btn-add" aria-label="Add UWCL Pro 24-25 Group Stage Ball to cart">Add to Cart</button>
       </div>
 
-      <div class="product" data-id="ball4" data-name="A-Leagues Ultimax Pro 24-25 Finals Ball" data-price="190" data-image="https://cdn.ultrafootball.com/a-leagues-ultimax-pro-ball.jpg">
-        <img src="https://cdn.ultrafootball.com/a-leagues-ultimax-pro-ball.jpg" alt="A-Leagues Ultimax Pro 24-25 Finals Ball" loading="lazy" />
+      <div class="product" data-id="ball4" data-name="A-Leagues Ultimax Pro 24-25 Finals Ball" data-price="165" data-image="https://cdn.ultrafootball.com/products/a-leagues-ultimax-pro-24-25-finals-ball-5b01915d17.jpg">
+        <img src="https://cdn.ultrafootball.com/products/a-leagues-ultimax-pro-24-25-finals-ball-5b01915d17.jpg" alt="A-Leagues Ultimax Pro 24-25 Finals Ball" loading="lazy" />
         <h3>A-Leagues Ultimax Pro 24-25 Finals Ball</h3>
-        <p>$190</p>
-        <button onclick="addToCart('ball4')">Add to Cart</button>
+        <p>$165</p>
+        <button class="btn-add" aria-label="Add A-Leagues Ultimax Pro 24-25 Finals Ball to cart">Add to Cart</button>
       </div>
-    </div>
+
+    </section>
   </main>
 
   <script>
-    // Mobile nav toggle
-    const navToggle = document.querySelector('.nav-toggle');
+    const navToggle = document.getElementById('nav-toggle');
     const navLinks = document.querySelector('.nav-links');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('nav-links-visible');
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('nav-links-visible'));
+
+    document.querySelectorAll('.btn-add').forEach(button => {
+      button.addEventListener('click', e => {
+        const productEl = e.target.closest('.product');
+        const id = productEl.dataset.id;
+        addToCart(id);
+      });
+    });
+
+    const searchInput = document.getElementById('search-input');
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.toLowerCase();
+      document.querySelectorAll('.product').forEach(product => {
+        const name = product.dataset.name.toLowerCase();
+        product.style.display = name.includes(query) ? '' : 'none';
+      });
     });
   </script>
 </body>
