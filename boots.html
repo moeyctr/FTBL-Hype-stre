@@ -4,10 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Boots - FTBL Hype</title>
-  
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-  
   <link rel="stylesheet" href="css/style.css" />
   <script defer src="js/cart.js"></script>
 </head>
@@ -18,7 +15,6 @@
         <img src="assets/logo.png" alt="FTBL Hype Logo" />
         <span>FTBL Hype</span>
       </a>
-
       <nav class="nav" aria-label="Primary Navigation">
         <button id="nav-toggle" class="nav-toggle" aria-label="Toggle menu">☰</button>
         <ul class="nav-links">
@@ -27,11 +23,7 @@
           <li><a href="kits.html">Kits</a></li>
           <li><a href="balls.html">Balls</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li>
-            <a href="cart.html" class="cart-link" aria-label="View Cart">
-              Cart <span id="cart-count" class="cart-count" aria-live="polite">0</span>
-            </a>
-          </li>
+          <li><a href="cart.html" class="cart-link" aria-label="View Cart">Cart <span id="cart-count" class="cart-count" aria-live="polite">0</span></a></li>
         </ul>
       </nav>
     </div>
@@ -39,48 +31,77 @@
 
   <main class="container">
     <h1>Soccer Boots</h1>
-
-    <!-- Search bar -->
     <div class="search-container">
       <input type="search" id="search-input" placeholder="Search boots..." aria-label="Search boots" />
     </div>
 
     <section id="products" class="products">
-      <!-- Products loaded here -->
-      <div class="product" data-id="boot1" data-name="Copa Mundial FG" data-price="260" data-image="https://cdn.ultrafootball.com/000000000015110.jpg">
-        <img src="https://cdn.ultrafootball.com/000000000015110.jpg" alt="Copa Mundial FG" loading="lazy" />
+      <!-- All boots here -->
+      <div class="product" data-id="boot1" data-name="Copa Mundial FG" data-price="260" data-image="https://cdn.ultrafootball.com/products/copa-mundial-fg-015110.jpg">
+        <img src="https://cdn.ultrafootball.com/products/copa-mundial-fg-015110.jpg" alt="Copa Mundial FG" loading="lazy" />
         <h3>Copa Mundial FG</h3>
         <p>$260</p>
         <button class="btn-add" aria-label="Add Copa Mundial FG to cart">Add to Cart</button>
       </div>
 
-      <div class="product" data-id="boot2" data-name="F50 FG Radiant Blaze" data-price="210" data-image="https://cdn.ultrafootball.com/00000000003211.jpg">
-        <img src="https://cdn.ultrafootball.com/00000000003211.jpg" alt="F50 FG Radiant Blaze" loading="lazy" />
+      <div class="product" data-id="boot2" data-name="F50 FG Radiant Blaze" data-price="210" data-image="https://cdn.ultrafootball.com/products/f50-fg-radiant-blaze-pack-js3211.jpg">
+        <img src="https://cdn.ultrafootball.com/products/f50-fg-radiant-blaze-pack-js3211.jpg" alt="F50 FG Radiant Blaze" loading="lazy" />
         <h3>F50 FG Radiant Blaze</h3>
         <p>$210</p>
         <button class="btn-add" aria-label="Add F50 FG Radiant Blaze to cart">Add to Cart</button>
       </div>
 
-      <div class="product" data-id="boot3" data-name="Copa Pure 3 Elite Laceless FG" data-price="280" data-image="https://cdn.ultrafootball.com/00000000006302.jpg">
-        <img src="https://cdn.ultrafootball.com/00000000006302.jpg" alt="Copa Pure 3 Elite Laceless FG" loading="lazy" />
+      <div class="product" data-id="boot3" data-name="Copa Pure 3 Elite Laceless FG" data-price="280" data-image="https://cdn.ultrafootball.com/products/copa-pure-3-elite-laceless-fg-radiant-blaze-pack-jh6302.jpg">
+        <img src="https://cdn.ultrafootball.com/products/copa-pure-3-elite-laceless-fg-radiant-blaze-pack-jh6302.jpg" alt="Copa Pure 3 Elite Laceless FG" loading="lazy" />
         <h3>Copa Pure 3 Elite Laceless FG</h3>
         <p>$280</p>
         <button class="btn-add" aria-label="Add Copa Pure 3 Elite Laceless FG to cart">Add to Cart</button>
       </div>
 
-      <!-- Add all other boots similarly -->
+      <div class="product" data-id="boot4" data-name="Zoom Mercurial Vapor 16 Elite FG Vini Jr" data-price="300" data-image="https://cdn.ultrafootball.com/products/zoom-mercurial-vapor-16-elite-fg-vini-jr-ib2356-001.jpg">
+        <img src="https://cdn.ultrafootball.com/products/zoom-mercurial-vapor-16-elite-fg-vini-jr-ib2356-001.jpg" alt="Zoom Mercurial Vapor 16 Elite FG Vini Jr" loading="lazy" />
+        <h3>Zoom Mercurial Vapor 16 Elite FG Vini Jr</h3>
+        <p>$300</p>
+        <button class="btn-add" aria-label="Add Zoom Mercurial Vapor 16 Elite FG Vini Jr to cart">Add to Cart</button>
+      </div>
+
+      <div class="product" data-id="boot5" data-name="Phantom GX 2 Elite AG PRO Prism Pack" data-price="275" data-image="https://cdn.ultrafootball.com/products/phantom-gx-2-elite-ag-pro-prism-pack-fj2554-800.jpg">
+        <img src="https://cdn.ultrafootball.com/products/phantom-gx-2-elite-ag-pro-prism-pack-fj2554-800.jpg" alt="Phantom GX 2 Elite AG PRO Prism Pack" loading="lazy" />
+        <h3>Phantom GX 2 Elite AG PRO Prism Pack</h3>
+        <p>$275</p>
+        <button class="btn-add" aria-label="Add Phantom GX 2 Elite AG PRO Prism Pack to cart">Add to Cart</button>
+      </div>
+
+      <div class="product" data-id="boot6" data-name="Copa Pure 3 Elite FG Celestial Victory Pack" data-price="280" data-image="https://cdn.ultrafootball.com/products/copa-pure-3-elite-fg-celestial-victory-pack-id9038.jpg">
+        <img src="https://cdn.ultrafootball.com/products/copa-pure-3-elite-fg-celestial-victory-pack-id9038.jpg" alt="Copa Pure 3 Elite FG Celestial Victory Pack" loading="lazy" />
+        <h3>Copa Pure 3 Elite FG Celestial Victory Pack</h3>
+        <p>$280</p>
+        <button class="btn-add" aria-label="Add Copa Pure 3 Elite FG Celestial Victory Pack to cart">Add to Cart</button>
+      </div>
+
+      <div class="product" data-id="boot7" data-name="Phantom GX 2 Elite LV8 FG Chromatic Pack" data-price="275" data-image="https://cdn.ultrafootball.com/products/phantom-gx-2-elite-lv8-fg-chromatic-pack-hv4890-100.jpg">
+        <img src="https://cdn.ultrafootball.com/products/phantom-gx-2-elite-lv8-fg-chromatic-pack-hv4890-100.jpg" alt="Phantom GX 2 Elite LV8 FG Chromatic Pack" loading="lazy" />
+        <h3>Phantom GX 2 Elite LV8 FG Chromatic Pack</h3>
+        <p>$275</p>
+        <button class="btn-add" aria-label="Add Phantom GX 2 Elite LV8 FG Chromatic Pack to cart">Add to Cart</button>
+      </div>
+
+      <div class="product" data-id="boot8" data-name="Tiempo Legend 10 Elite FG Chromatic Pack" data-price="290" data-image="https://cdn.ultrafootball.com/products/tiempo-legend-10-elite-fg-chromatic-pack-hv4889-100.jpg">
+        <img src="https://cdn.ultrafootball.com/products/tiempo-legend-10-elite-fg-chromatic-pack-hv4889-100.jpg" alt="Tiempo Legend 10 Elite FG Chromatic Pack" loading="lazy" />
+        <h3>Tiempo Legend 10 Elite FG Chromatic Pack</h3>
+        <p>$290</p>
+        <button class="btn-add" aria-label="Add Tiempo Legend 10 Elite FG Chromatic Pack to cart">Add to Cart</button>
+      </div>
     </section>
   </main>
 
   <script>
-    // Navigation toggle for mobile
+    // Mobile nav toggle
     const navToggle = document.getElementById('nav-toggle');
     const navLinks = document.querySelector('.nav-links');
-    navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('nav-links-visible');
-    });
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('nav-links-visible'));
 
-    // Cart functions from cart.js will work automatically, but we add here:
+    // Cart add buttons
     document.querySelectorAll('.btn-add').forEach(button => {
       button.addEventListener('click', e => {
         const productEl = e.target.closest('.product');
