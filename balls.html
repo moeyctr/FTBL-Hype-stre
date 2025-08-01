@@ -52,4 +52,22 @@
         <button onclick="addToCart('ball3')">Add to Cart</button>
       </div>
 
-     
+      <div class="product" data-id="ball4" data-name="A-Leagues Ultimax Pro 24-25 Finals Ball" data-price="190" data-image="https://cdn.ultrafootball.com/a-leagues-ultimax-pro-ball.jpg">
+        <img src="https://cdn.ultrafootball.com/a-leagues-ultimax-pro-ball.jpg" alt="A-Leagues Ultimax Pro 24-25 Finals Ball" loading="lazy" />
+        <h3>A-Leagues Ultimax Pro 24-25 Finals Ball</h3>
+        <p>$190</p>
+        <button onclick="addToCart('ball4')">Add to Cart</button>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // Mobile nav toggle
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    navToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-links-visible');
+    });
+  </script>
+</body>
+</html>
